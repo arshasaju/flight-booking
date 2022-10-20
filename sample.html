@@ -1,0 +1,33 @@
+<input type="submit" onClick="javascript:saveData();"  id="submit" name="submit" value="Submit" style="background-color:blue; color:white"; />
+                        <input type="reset" id="reset" value="Reset" style="background-color:blue; color:white";/>
+                    </td>
+                </tr>
+
+
+
+
+                
+            </table>
+            <!-- <button style="background-color:blue; color:white;">Submit</button>
+            <button style="background-color:blue; color:white;">Reset</button> -->
+        </form>
+
+<!--Booking from end-->
+<script>
+    function saveData(){
+        //alert("hi");
+        var firstName=document.getElementById('firstName').value;
+        var lastName=document.getElementById('lastName').value;
+        var address=document.getElementById('address').value;
+
+        localStorage.setItem("firstName",firstName);
+        localStorage.setItem("lastName",lastName);
+        localStorage.setItem("address",address);
+
+    }
+</script>
+            
+        
+        <a href="index.html" style="color:rgb(233, 159, 201)" > BACK TO LOGIN PAGE</a>
+    </body>
+</html>

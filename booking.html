@@ -1,9 +1,184 @@
 <html>
     <head>
         <title>Ticket Booking</title>
+        <link href="./css/main.css" type="text/css" rel="stylesheet"/>
+        <style type="text/css">
+            .label{
+                color: green;
+    
+            }
+            .tab1{
+                border: 5px solid #cc000c;
+                background-color: aqua;
+            
+            }
+            #lastName{
+                color: blue;
+            }
+            body > p{
+                font-style: italic;
+            }
+    
+        </style>
     </head>
-    <body bgcolor="cyan" background="https://th.bing.com/th/id/OIP.RUzaF20MXXHTXz1MiFMysgHaFW?pid=ImgDet&rs=1" height="400" width="400">
-        <p style="color:red">Select the flight</p>
-        <a style="color:red"href="index.html">Click here to go back to home page</a>
+    <body bgcolor="cyan" background="https://goodstock.photos/wp-content/uploads/2019/03/Puffy-Clouds-in-the-Sky-1920x1280.jpg" height="600" width="500">
+        <h2 style="color:blue">Booking Form</h2>
+        <video width="320" height="240" controls autoplay muted>
+            <source src="sample.mp4" type="video/mp4">
+        </video>
+        <audio controls>
+            <source src="sampleaudio.mp3" type="audio/mpeg">
+            <source src="" type="audio/ogg">
+
+        </audio>
+        <form action="print.html" method="POST">
+            <table cellspacing="6" cellpadding="2">
+                <tr>
+                    <td>
+                        <label for="title">Title</label>
+                    </td>
+                    <td>
+                        <select id="title" name="title">
+                            <option value="1" selected>Mr.</option>
+                            <option value="2">Mrs.</option>
+                            <option value="3">Ms.</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+            <td>
+                <label for="First Name">First Name:</label>
+            </td>
+            <td>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label for="Last Name">Lasst Name:</label>
+            </td>
+            <td>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Adress:</label>
+                </td>
+                <td>
+                    <textarea id="address" name="address" placeholder="Your Last Name" rows="6" cols="20"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth:</label>
+                </td>
+                <td>
+                    <input type="date" id="dob" name="Date of Birth" placeholder="YYYY-MM-DD">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Gender:</label>
+                </td>
+                <td>
+                    <input type="radio" id="Male" name="Gender" value="1"/>Male
+                    <input type="radio" id="Female" name="Gender" value="2"/>Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="photo"></label>
+
+                </td>
+                <td>
+                    <input type="file" id="photoFile" name="photoFile" accept="image/*,*.pdf/">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mobile">Mobile:</label>
+                </td>
+                <td>
+                    <input type="text" id="Mobile" name="Mobile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email:</label>
+                </td>
+                <td>
+                    <input type="text" id="Email" name="Email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="username">Username:</label>
+                </td>
+                <td>
+                    <input type="text" id="Username" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                </td>
+                <td>
+                    <input type="password" id="Password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Can we contact you?</label>
+                </td>
+                <td>
+                    <input type="radio" id="Yes" name="canwecontactyou" value="1"/>Yes
+                    <input type="radio" id="No" name="canwecontactyou" value="2"/>No
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Communication Preferrence</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="Email" name="CP" value="1"/>Email
+                    <input type="checkbox" id="SMS" name="CP" value="2"/>SMS
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <input type="checkbox" id="terms" name="terms">  I agree to the<a href="terms.html"> terms and conditions</a> of the website.
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            
+                <tr>
+                    <td>
+                        <input type="submit" onClick="javascript:saveData();"  id="submit" name="submit" value="Submit" style="background-color:blue; color:white"; />
+                        <button style="margin-left:3%;" >Reset</button>
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+        <script>
+             function saveData(){
+            
+            var firstName = document.getItemById('firstName').value;
+            var lastName=document.getItemById('lastName').value;
+            var address=document.getItemById('address').value;
+            
+            localStorage.setItem("firstName",firstName);
+            localStorage.setItem("lastName",lastName);
+            localStorage.setItem("address",address);
+
+        }
+        </script>
+        
+
+        <a style="color:rgb(240, 32, 32)"href="index.html">Back to home page</a>
     </body>
 </html>

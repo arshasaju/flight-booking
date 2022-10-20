@@ -1,0 +1,22 @@
+.label{
+    color: green;
+
+}
+.tab1{
+    border: 5px solid #cc000c;
+    background-color: aqua;
+
+}
+#lastName{
+    color: blue;
+}
+body > p{
+    font-style: italic;
+}
+h2{
+    font-style: italic;
+}
+.parent{
+    border: 2px;
+    padding: 10px:0%;
+}
